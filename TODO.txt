@@ -1,0 +1,20 @@
+TODO List :
+
+*** IMPORTANT => more substitute 
+	* swap with XOR/ADD/SUB
+	* use CMOV/NOT/NEG/SHR/AND/OR/XOR/XCHG/XADD
+1- Indirect branches for anti-disassembly. eg JMP ECX
+2- Hiding  CFG by self-modifing
+3- SSE/FPU decryption routine
+4- XOR with MZ of nth module or any other fix data ( read PTR in shellcode detectors 7-31 ~= 19 )
+5- Shellcode relocation with native APIs like NtAllocateVirualMemory/NtReadVirtualMemory ( get windows version by ntdll PE optional header info).
+6- NO two null-bytes continuously (or no null-byte at all) 
+7- FPU/SSE garbages
+8- rearrange the garbage table for every gen
+9- Hiding getpc pattern by runtime decode and execution of getpc (using stack for example) eg:
+	  MOV REG, GETPC_INST_CONSTANT
+	  XOR REG, RANDOM_VALUE
+	  PUSH REG
+	  CALL ESP
+	  <REST OF CODE>
+
